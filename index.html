@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Crescendo – Optimisateur & Réducteur de Grilles Crescendo FDJ</title>
+    <meta
+      name="description"
+      content="Mon Crescendo : générez, réduisez et analysez vos grilles Crescendo FDJ (10 numéros parmi 25 + lettre SAMEDI). Couverture mathématique, statistiques et gestion de budget."
+    />
+    <meta name="keywords" content="Mon Crescendo, Crescendo FDJ, réducteur de grilles, générateur crescendo, loterie FDJ, combinaisons crescendo, tirage samedi crescendo" />
+    <meta name="author" content="Mon Crescendo" />
+    <link rel="canonical" href="https://mon-crescendo.fr/" />
+    
+    <!-- OpenGraph Social Cards -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mon Crescendo – Optimisateur & Réducteur de Grilles Crescendo FDJ" />
+    <meta
+      property="og:description"
+      content="Mon Crescendo : générez, réduisez et analysez vos grilles Crescendo FDJ (10 numéros parmi 25 + lettre SAMEDI). Couverture mathématique, statistiques et gestion de budget."
+    />
+    <meta property="og:site_name" content="Mon Crescendo" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://mon-crescendo.fr/" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mon Crescendo – Optimisateur & Réducteur de Grilles Crescendo FDJ" />
+    <meta
+      name="twitter:description"
+      content="Mon Crescendo : générez, réduisez et analysez vos grilles Crescendo FDJ (10 numéros parmi 25 + lettre SAMEDI). Couverture mathématique, statistiques et gestion de budget."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Mon Crescendo",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "All",
+          "description": "Application d'aide à la décision, réduction mathématique de combinaisons et maîtrise budgétaire pour le jeu officiel Crescendo FDJ (10 numéros parmi 25 + lettre SAMEDI).",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "0",
+            "highPrice": "9.99",
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qu'est-ce que Mon Crescendo ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mon Crescendo est un logiciel en ligne indépendant conçu pour aider les joueurs de Crescendo FDJ à générer, réduire et comparer leurs grilles de 10 numéros parmi 25, tout en maîtrisant leur budget de jeu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Un réducteur de combinaisons garantit-il un gain au jeu Crescendo FDJ ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Les tirages de loterie sont strictement aléatoires et indépendants. Mon Crescendo offre une garantie mathématique conditionnelle de couverture (optimisation des sous-ensembles de paires et triplets), mais ne modifie jamais les probabilités sous-jacentes du tirage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Les statistiques de Mon Crescendo permettent-elles de prédire le prochain tirage ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Chaque tirage du samedi est stochastiquement indépendant. L'analyse des fréquences passées est purement descriptive et n'augure pas des tirages futurs."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#090a0f] text-neutral-100 antialiased selection:bg-blue-600 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

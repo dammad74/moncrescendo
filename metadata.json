@@ -1,0 +1,6 @@
+{
+  "name": "Mon Crescendo",
+  "description": "Préparez vos grilles Crescendo intelligemment. Générez, réduisez et analysez vos combinaisons mathématiques (10/25 + SAMEDI) et maîtrisez votre budget avec Mon Crescendo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
