@@ -115,7 +115,7 @@ export default function App() {
   const hasAdvancedStats = isFeatureUnlocked('advanced_stats', entitlements);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#090a0f] text-neutral-100 selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-[#090a0f] dark:text-neutral-100 selection:bg-blue-600 selection:text-white transition-colors duration-200">
       {/* 1. Bandeau de jeu responsable */}
       <ResponsibleGamingBanner />
 
@@ -145,7 +145,7 @@ export default function App() {
             />
 
             {/* In-page direct tool sections for quick access */}
-            <div className="border-t border-neutral-800/80">
+            <div className="border-t border-slate-200 dark:border-neutral-800/80">
               <GeneratorView
                 hasUnlimited={hasUnlimitedGenerator}
                 hasProExports={hasProExports}
@@ -153,7 +153,7 @@ export default function App() {
               />
             </div>
 
-            <div className="border-t border-neutral-800/80">
+            <div className="border-t border-slate-200 dark:border-neutral-800/80">
               <SystemReducer
                 isUnlocked={hasSystemReducer}
                 hasProExports={hasProExports}
@@ -161,11 +161,11 @@ export default function App() {
               />
             </div>
 
-            <div className="border-t border-neutral-800/80">
+            <div className="border-t border-slate-200 dark:border-neutral-800/80">
               <BudgetSimulator />
             </div>
 
-            <div className="border-t border-neutral-800/80">
+            <div className="border-t border-slate-200 dark:border-neutral-800/80">
               <PricingSection
                 entitlements={entitlements}
                 onSelectPlan={(planId) => handleOpenPricingModal(planId)}

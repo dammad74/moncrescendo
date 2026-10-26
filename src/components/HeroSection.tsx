@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, ShieldCheck, Cpu, Sliders } from 'lucide-react';
+import { Sparkles, ArrowRight, ShieldCheck, Cpu } from 'lucide-react';
 import { CRESCENDO_LETTERS, CrescendoLetter } from '../types/crescendo';
+import heroVisualImg from '../assets/images/crescendo_hero_visual_1792584659146.jpg';
 
 interface HeroSectionProps {
   onNavigate: (tab: string) => void;
@@ -21,7 +22,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
   };
 
   return (
-    <section className="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden border-b border-neutral-800/60">
+    <section className="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden border-b border-slate-200 dark:border-neutral-800/60">
       {/* Background ambient gradient */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-blue-600/15 via-indigo-600/10 to-violet-600/15 blur-[120px] pointer-events-none rounded-full" />
 
@@ -30,19 +31,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
           {/* Left Column: Value Proposition & CTAs */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             {/* Context metadata - unboxed per zero-pill rule */}
-            <div className="flex items-center gap-2 text-xs text-neutral-400 mb-4 font-medium tracking-wide">
-              <span className="text-blue-400 font-semibold">Crescendo FDJ</span>
+            <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-neutral-400 mb-4 font-medium tracking-wide">
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">Crescendo FDJ</span>
               <span aria-hidden="true">·</span>
               <span>10 Numéros parmi 25 + Lettre SAMEDI</span>
               <span aria-hidden="true">·</span>
               <span>7 Tirages le Samedi · Jusqu&apos;à 700 000 €</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-neutral-100 tracking-tight leading-[1.12] mb-6 [text-wrap:balance]">
-              Préparez vos grilles <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-violet-400 bg-clip-text text-transparent">Crescendo</span> intelligemment
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 dark:text-neutral-100 tracking-tight leading-[1.12] mb-6 [text-wrap:balance]">
+              Préparez vos grilles <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 dark:from-blue-400 dark:via-indigo-300 dark:to-violet-400 bg-clip-text text-transparent">Crescendo</span> intelligemment
             </h1>
 
-            <p className="text-base sm:text-lg text-neutral-300 font-normal leading-relaxed mb-8 max-w-2xl">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-neutral-300 font-normal leading-relaxed mb-8 max-w-2xl">
               Générez, réduisez et analysez vos combinaisons en quelques secondes. Maîtrisez votre couverture mathématique et votre budget sans jamais surpayer vos grilles.
             </p>
 
@@ -58,27 +59,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
 
               <button
                 onClick={() => onNavigate('reducer')}
-                className="flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-neutral-200 bg-neutral-900/80 hover:bg-neutral-800 border border-neutral-700/80 rounded-lg transition-all whitespace-nowrap shrink-0 cursor-pointer"
+                className="flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-slate-700 dark:text-neutral-200 bg-white dark:bg-neutral-900/80 hover:bg-slate-50 dark:hover:bg-neutral-800 border border-slate-300 dark:border-neutral-700/80 rounded-lg shadow-sm transition-all whitespace-nowrap shrink-0 cursor-pointer"
               >
-                <Cpu className="w-4 h-4 text-indigo-400" />
+                <Cpu className="w-4 h-4 text-indigo-500 dark:text-indigo-400" />
                 <span>Réduire mes combinaisons</span>
               </button>
 
               <button
                 onClick={onOpenPricing}
-                className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-neutral-300 hover:text-white transition-colors whitespace-nowrap shrink-0"
+                className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-slate-600 dark:text-neutral-300 hover:text-slate-900 dark:hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-violet-400" />
+                <Sparkles className="w-4 h-4 text-violet-500 dark:text-violet-400" />
                 <span>Découvrir Premium</span>
               </button>
             </div>
 
             {/* Strict Regulatory Clarification Notice */}
-            <div className="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800 text-xs text-neutral-300 max-w-2xl">
+            <div className="p-4 rounded-xl bg-white dark:bg-neutral-900/80 border border-slate-200 dark:border-neutral-800 text-xs text-slate-600 dark:text-neutral-300 max-w-2xl shadow-sm">
               <div className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                <ShieldCheck className="w-4 h-4 text-blue-500 dark:text-blue-400 shrink-0 mt-0.5" />
                 <p className="leading-relaxed">
-                  <strong className="text-neutral-100 font-semibold">Principe de transparence :</strong> Les tirages Crescendo sont rigoureusement aléatoires. Aucun système ne peut garantir un gain financier. Mon Crescendo optimise la dispersion mathématique de vos tickets pour rationaliser votre mise.
+                  <strong className="text-slate-900 dark:text-neutral-100 font-semibold">Principe de transparence :</strong> Les tirages Crescendo sont rigoureusement aléatoires. Aucun système ne peut garantir un gain financier. Mon Crescendo optimise la dispersion mathématique de vos tickets pour rationaliser votre mise.
                 </p>
               </div>
             </div>
@@ -86,20 +87,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
 
           {/* Right Column: Visualizer with Real 3D Ball Rendering & Micro-interactions */}
           <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="w-full relative glass-panel rounded-2xl p-6 border border-neutral-800 shadow-2xl overflow-hidden">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-5 border border-neutral-800/80">
+            <div className="w-full relative glass-panel rounded-2xl p-6 border border-slate-200 dark:border-neutral-800 shadow-xl overflow-hidden">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-5 border border-slate-300/80 dark:border-neutral-800/80 bg-neutral-950">
                 <img
-                  src="/src/assets/images/crescendo_hero_visual_1792584659146.jpg"
+                  src={heroVisualImg}
                   alt="Visualisation 3D sphères Crescendo"
                   className="w-full h-full object-cover object-center"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/crescendo_hero_visual.jpg';
+                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950/30" />
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-neutral-200">
-                  <span className="font-medium">Modélisation Crescendo FDJ</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-transparent to-neutral-950/20 pointer-events-none" />
+                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white drop-shadow">
+                  <span className="font-medium tracking-wide">Modélisation Sphères Crescendo FDJ</span>
                   <button
                     onClick={handleShufflePreview}
-                    className="text-xs text-blue-400 hover:text-blue-300 underline font-medium cursor-pointer"
+                    className="text-xs text-blue-300 hover:text-white underline font-medium cursor-pointer"
                   >
                     Mélanger l&apos;échantillon
                   </button>
@@ -108,9 +111,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
 
               {/* Live Interactive Spheres Bar */}
               <div className="mb-4">
-                <div className="text-xs text-neutral-400 font-medium mb-2.5 flex items-center justify-between">
+                <div className="text-xs text-slate-500 dark:text-neutral-400 font-medium mb-2.5 flex items-center justify-between">
                   <span>Grille officielle (10 numéros + Lettre SAMEDI)</span>
-                  <span className="font-mono text-neutral-400">Somme: {previewBalls.reduce((a, b) => a + b, 0)}</span>
+                  <span className="font-mono">Somme: {previewBalls.reduce((a, b) => a + b, 0)}</span>
                 </div>
 
                 <div className="flex items-center justify-center gap-2 sm:gap-2.5 flex-wrap py-2">
@@ -120,15 +123,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
                       onClick={() => setActiveNumber(num)}
                       className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold font-mono transition-transform hover:scale-105 cursor-pointer shadow-md ${
                         activeNumber === num
-                          ? 'bg-blue-500 text-white ring-2 ring-blue-300 blue-glow'
-                          : 'bg-neutral-800 text-neutral-200 border border-neutral-700 hover:bg-neutral-700'
+                          ? 'bg-blue-600 text-white ring-2 ring-blue-400 blue-glow'
+                          : 'bg-slate-100 dark:bg-neutral-800 text-slate-700 dark:text-neutral-200 border border-slate-200 dark:border-neutral-700 hover:bg-slate-200 dark:hover:bg-neutral-700'
                       }`}
                     >
                       {num}
                     </button>
                   ))}
 
-                  <div className="w-px h-8 bg-neutral-800 mx-1" />
+                  <div className="w-px h-8 bg-slate-300 dark:bg-neutral-800 mx-1" />
 
                   {/* Lettre Crescendo */}
                   <button
@@ -145,22 +148,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
               </div>
 
               {/* Quick stats of the selected sample */}
-              <div className="pt-3 border-t border-neutral-800/80 grid grid-cols-3 gap-2 text-center text-xs">
+              <div className="pt-3 border-t border-slate-200 dark:border-neutral-800/80 grid grid-cols-3 gap-2 text-center text-xs">
                 <div>
-                  <span className="text-neutral-400 block text-[11px]">Parité</span>
-                  <span className="text-neutral-200 font-semibold font-mono">
+                  <span className="text-slate-500 dark:text-neutral-400 block text-[11px]">Parité</span>
+                  <span className="text-slate-800 dark:text-neutral-200 font-semibold font-mono">
                     {previewBalls.filter((n) => n % 2 === 0).length}P / {previewBalls.filter((n) => n % 2 !== 0).length}I
                   </span>
                 </div>
                 <div>
-                  <span className="text-neutral-400 block text-[11px]">Hauts / Bas</span>
-                  <span className="text-neutral-200 font-semibold font-mono">
+                  <span className="text-slate-500 dark:text-neutral-400 block text-[11px]">Hauts / Bas</span>
+                  <span className="text-slate-800 dark:text-neutral-200 font-semibold font-mono">
                     {previewBalls.filter((n) => n >= 13).length}H / {previewBalls.filter((n) => n < 13).length}B
                   </span>
                 </div>
                 <div>
-                  <span className="text-neutral-400 block text-[11px]">Lettre tirée</span>
-                  <span className="text-purple-400 font-semibold font-mono">{activeLetter}</span>
+                  <span className="text-slate-500 dark:text-neutral-400 block text-[11px]">Lettre tirée</span>
+                  <span className="text-purple-600 dark:text-purple-400 font-semibold font-mono">{activeLetter}</span>
                 </div>
               </div>
             </div>
@@ -168,22 +171,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenPric
         </div>
 
         {/* 4-Column Proof & KPI Strip below hero split */}
-        <div className="mt-14 pt-8 border-t border-neutral-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+        <div className="mt-14 pt-8 border-t border-slate-200 dark:border-neutral-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
           <div>
-            <div className="text-2xl font-bold font-mono text-neutral-100 tabular-nums">10 / 25 Numéros</div>
-            <p className="text-xs text-neutral-400 mt-1">10 numéros choisis par grille sur le pool de 25</p>
+            <div className="text-2xl font-bold font-mono text-slate-900 dark:text-neutral-100 tabular-nums">10 / 25 Numéros</div>
+            <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1">10 numéros choisis par grille sur le pool de 25</p>
           </div>
           <div>
-            <div className="text-2xl font-bold font-mono text-neutral-100 tabular-nums">7 Tirages Samedi</div>
-            <p className="text-xs text-neutral-400 mt-1">Tirages horaires avec lettres SAMEDI attribuées</p>
+            <div className="text-2xl font-bold font-mono text-slate-900 dark:text-neutral-100 tabular-nums">7 Tirages Samedi</div>
+            <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1">Tirages horaires avec lettres SAMEDI attribuées</p>
           </div>
           <div>
-            <div className="text-2xl font-bold font-mono text-emerald-400 tabular-nums">Jusqu&apos;à 700 000 €</div>
-            <p className="text-xs text-neutral-400 mt-1">Jackpot évolutif de rang 1 + gains fixes autres rangs</p>
+            <div className="text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400 tabular-nums">Jusqu&apos;à 700 000 €</div>
+            <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1">Jackpot évolutif de rang 1 + gains fixes autres rangs</p>
           </div>
           <div>
-            <div className="text-2xl font-bold font-mono text-blue-400 tabular-nums">0 Compte Requis</div>
-            <p className="text-xs text-neutral-400 mt-1">Génération immédiate, réduction mathématique & budget</p>
+            <div className="text-2xl font-bold font-mono text-blue-600 dark:text-blue-400 tabular-nums">0 Compte Requis</div>
+            <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1">Génération immédiate, réduction mathématique & budget</p>
           </div>
         </div>
       </div>
